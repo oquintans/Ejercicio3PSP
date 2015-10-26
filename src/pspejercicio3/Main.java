@@ -36,14 +36,14 @@ public class Main extends Thread {
             //Crearemos en total 5 hilos
             while (cont <= 5) {
                 //Numero de hilo
-                cont++;
-                //Dentro de cada hilo crea el siguiente
-                hilo = new Main("Hilo" + cont);
+                cont++;                
                 //Bucle que indica que cada hilo se esta procesando
                 for (int i = 0; i < 10; i++) {
                     System.out.println(getName() + " procesando");
                     sleep((long) ((Math.random() * (600 - 100)) + 100));
-                }
+                }                
+                //Dentro de cada hilo crea el siguiente
+                hilo = new Main("Hilo" + cont);
                 //Condicional para que arranque solo hasta 5 hilos
                 if (cont <= 5) {
                     //Inicia el siguiente hilo
